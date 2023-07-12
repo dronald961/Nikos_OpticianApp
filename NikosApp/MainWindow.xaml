@@ -1,0 +1,35 @@
+﻿<Window x:Class="NikosApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NikosApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Frame x:Name="MainFrame" />
+        <Menu VerticalAlignment="Top">
+            <MenuItem Header="Προϊόντα" >
+                <MenuItem Header="1. Νέα προϊόντα" Click="NewItem_Click"/>
+                <MenuItem Header="2. Σκελετοί" Click="Frames_Click"/>
+                <MenuItem Header="3. Κρύσταλλα οράσεως" Click="Lenses_Click"/>
+                <MenuItem Header="4. Φακοί επαφής" Click="ContactLenses_Click"/>
+                <MenuItem Header="5. Καθαριστικά για φακούς επαφής" Click="LensCleaners_Click"/>
+                <MenuItem Header="6. Άλλα προϊόντα" Click="OtherProducts_Click"/>
+                <MenuItem Header="7. Φίρμες" Click="Brands_Click"/>
+            </MenuItem>
+            <MenuItem Header="Πελάτες"/>
+            <MenuItem Header="Προμηθευτές"/>
+            <MenuItem Header="Αγορές"/>
+            <MenuItem Header="Πωλήσεις"/>
+            <MenuItem Header="Ρυθμίσεις"/>
+        </Menu>
+        <DockPanel LastChildFill="False" Margin="0,40,20,0">
+            <TextBlock DockPanel.Dock="Left" Text="{Binding CurrentDateTime, StringFormat='{}{0:dd/MM/yyyy HH:mm:ss}'}" />
+            <TextBlock DockPanel.Dock="Right" Text="ΟΝΟΜΑ ΜΑΓΑΖΙΟΥ" Foreground="Red" FontSize="20" />
+        </DockPanel>
+        
+       
+
+    </Grid>
+</Window>
